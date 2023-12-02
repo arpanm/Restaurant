@@ -373,3 +373,23 @@ service all with serviceImpl except Employee, Job
 
 // Set an angular suffix
 // angularSuffix * with mySuffix
+
+application {
+  config {
+    baseName Restaurant
+    applicationType monolith
+    serverPort 9001
+    devDatabaseType mysql
+    prodDatabaseType mysql
+    clientFramework react
+    clientPackageManager npm
+    authenticationType jwt
+    buildTool maven
+    enableSwaggerCodegen true
+    packageName com.restaurant.angikar
+  }
+  entities *
+  dto * with mapstruct
+  paginate * with infinite-scroll
+  service all with serviceImpl
+}
