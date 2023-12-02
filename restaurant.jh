@@ -1,0 +1,375 @@
+
+enum RestaurantType {
+   MultiCusion, CloudKitchen
+}
+
+enum NutritionType {
+   Calory,
+   Fat,
+   Protein,
+   Carbs
+}
+
+enum FoodType {
+   Veg,
+   NonVeg,
+   Vegan
+}
+
+entity PincodeMaster {
+	pincode String
+    area String
+	city String
+	stateProvince String
+    country String
+}
+
+entity Location {
+	email String
+    phone String
+	streetAddress String
+	postalCode String
+    area String
+	city String
+	stateProvince String
+    country String
+    latitude Double
+    longitude Double
+}
+
+entity Restaurant {
+	name String
+    title String
+    logo String
+    type RestaurantType
+}
+relationship OneToOne {
+	Restaurant{location} to Location
+}
+
+relationship OneToMany {
+	Restaurant{admins} to User{restaurant}
+}
+
+entity Banner{
+    title String
+    imageUrl String
+    link String
+    description String
+    startDate Instant
+    endDate Instant
+    isActive Boolean
+}
+
+entity FoodCategory {
+	name String
+	description String
+    imageUrl String
+}
+
+entity Price {
+	mrp Double,
+    price Double,
+    discountPercentage Double
+}
+
+entity Unit {
+	name String
+}
+
+entity Quantity{
+	size Double
+    minQuantity Double
+}
+
+relationship OneToOne {
+	Quantity{unit} to Unit
+}
+
+entity Nutrition {
+	value Double
+    type NutritionType
+}
+
+entity ContainMaster {
+	value String
+}
+
+entity Item {
+	name String
+    imageUrl String
+    properties Long
+    foodType FoodType
+    contains String
+}
+
+
+relationship OneToOne {
+	Restaurant{location} to Location
+}
+
+relationship OneToOne {
+	Item{nutrition} to Nutrition
+    Item{price} to Price
+    Item{quantity} to Quantity
+}
+
+entity User {
+	name String
+    password String
+    email String
+    phone String
+    role UserRole
+}
+
+enum UserRole {
+	Customer,
+    RestaurantAdmin,
+    SuperAdmin
+}
+
+relationship OneToMany {
+	User{addresses} to Location{user}
+}
+
+entity WeightInfo {
+	currentWeight Double
+    expectedWeight Double
+    heightInInch Double
+    numberOfDays Integer
+}
+
+entity CalorieInfo {
+	dailyCalorieLimit Double 
+}
+
+entity MealPlanSettings {
+	dietType DietType
+    foodType FoodType
+}
+
+entity Avoid {
+	name String
+}
+
+relationship OneToMany {
+	MealPlanSettings{avoidList} to Avoid{mealPlanSetting}
+}
+
+relationship OneToOne {
+	MealPlanSettings{weightInfo} to WeightInfo
+    MealPlanSettings{calorieInfo} to CalorieInfo
+}
+
+entity MealPlan {
+    startDate Instant
+    endDate Instant
+    name String
+}
+
+relationship OneToMany {
+	MealPlanSettings{plans} to MealPlan{mealPlanSetting}
+}
+relationship OneToMany {
+	User{mealPlan} to MealPlan{user}
+}
+
+entity MealPlanItem {
+	name String // Name will be break fast, lunch dinner etc
+    hour Integer
+    pincode String
+}
+
+relationship ManyToMany {
+	MealPlanItem{item} to Item{mealPlanItem}
+}
+
+relationship OneToMany {
+	MealPlan{meals} to MealPlanItem{plan}
+}
+
+relationship OneToOne {
+	MealPlanItem{deliveryLocation} to Location
+}
+
+entity SkipDate {
+	date LocalDate
+}
+
+relationship OneToMany {
+	MealPlanItem{skipDates} to SkipDate{mealPlanItem}
+}
+
+enum DiscountSlab {
+	OneDay,
+    SevenDay,
+    ThirtyDay,
+    More
+}
+
+entity Discount {
+	discount Double
+    slab DiscountSlab
+}
+
+relationship OneToOne {
+	MealPlan{discount} to Discount
+}
+
+entity CartItem {
+	quantity Integer
+}
+
+entity Cart {
+	state String
+}
+
+relationship OneToMany {
+	Cart{items} to CartItem{cart}
+}
+
+relationship OneToMany {
+	User{cart} to Cart{user}
+}
+
+relationship OneToOne {
+	CartItem{item} to Item
+}
+
+relationship OneToOne {
+	CartItem{meal} to MealPlan
+}
+
+entity OrderItem {
+	quantity Integer
+}
+
+entity CouponMaster {
+	maxValue Double
+    maxPercentage Double
+    minOrderValue Double
+}
+
+entity Coupon {
+	maxValue Double
+    maxPercentage Double
+    minOrderValue Double
+}
+
+relationship OneToMany {
+	CouponMaster to Coupon{master}
+}
+
+relationship OneToOne {
+	Cart{coupon} to Coupon
+}
+
+entity Order{
+	state OrderStatus
+    date Instant
+    amount Double
+    couponValue Double
+}
+
+enum OrderStatus {
+	Pending, Delivered, Paid, PaymentFailed, InProcess
+}
+
+relationship OneToOne {
+	Order{coupon} to Coupon
+}
+
+enum PaymentVendor {
+	RazorPay
+}
+enum PaymentType {
+	COD,
+    CREDIT_CARD,
+    DEBIT_CARD,
+    WALLET
+}
+entity Payment {
+	state PaymentStatus
+    vendor PaymentVendor
+    type PaymentType
+    amount Double
+    initDate Instant
+    updatedDate Instant
+    totalRefundAmount Double
+}
+
+entity Refund {
+	state RefundStatus
+    vendor PaymentVendor
+    amount Double
+    initDate Instant
+    updatedDate Instant
+}
+
+relationship OneToMany {
+	Payment{refunds} to Refund{payment}
+}
+
+enum PaymentStatus {
+	Failed, Success, InProcess, PartialRefunded, Refunded
+}
+enum RefundStatus {
+	Success, InProcess
+}
+
+relationship OneToMany {
+	Order{payments} to Payment{order}
+}
+
+relationship OneToMany {
+	Order{items} to OrderItem
+}
+
+
+relationship OneToOne {
+	Order{billingLoc} to Location
+    Order{deliveryLoc} to Location // Not there for Meal
+}
+
+relationship ManyToOne {
+	Order{user} to User
+}
+
+relationship OneToOne {
+	OrderItem{restaurant} to Restaurant
+}
+
+relationship OneToOne {
+	OrderItem{item} to Item
+}
+
+relationship OneToOne {
+	OrderItem{meal} to MealPlan
+}
+
+
+entity ItemPincodeMapping {
+	serviceability String
+    pincode String
+}
+
+relationship OneToMany {
+	Item to ItemPincodeMapping{item}
+}
+
+relationship OneToMany {
+	FoodCategory to Item{category}
+}
+relationship OneToMany {
+	Restaurant to ItemPincodeMapping{restaurant}
+}
+
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
