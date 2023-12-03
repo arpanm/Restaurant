@@ -1,0 +1,25 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203180729",
+  "dto": "mapstruct",
+  "entityTableName": "ingredience_master",
+  "fields": [
+    {
+      "fieldName": "ingredience",
+      "fieldType": "String"
+    }
+  ],
+  "name": "IngredienceMaster",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "ingredience",
+      "relationshipName": "items",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,25 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203181229",
+  "dto": "mapstruct",
+  "entityTableName": "avoid",
+  "fields": [
+    {
+      "fieldName": "avoidIngredience",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Avoid",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "mealPlanSettings",
+      "otherEntityRelationshipName": "avoidList",
+      "relationshipName": "mealPlanSettings",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

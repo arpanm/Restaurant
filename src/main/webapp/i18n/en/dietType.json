@@ -1,0 +1,12 @@
+{
+  "restaurantApp": {
+    "DietType": {
+      "null": "",
+      "Keto": "Keto",
+      "IntermittentFasting": "IntermittentFasting",
+      "LowCarb": "LowCarb",
+      "LowFat": "LowFat",
+      "Blend": "Blend"
+    }
+  }
+}

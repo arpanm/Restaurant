@@ -1,0 +1,29 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203180929",
+  "dto": "mapstruct",
+  "entityTableName": "weight_info",
+  "fields": [
+    {
+      "fieldName": "currentWeight",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "expectedWeight",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "heightInInch",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "numberOfDays",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "WeightInfo",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

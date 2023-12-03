@@ -1,0 +1,28 @@
+{
+  "restaurantApp": {
+    "weightInfo": {
+      "home": {
+        "title": "Weight Infos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Weight Info",
+        "createOrEditLabel": "Create or edit a Weight Info",
+        "notFound": "No Weight Infos found"
+      },
+      "created": "A new Weight Info is created with identifier {{ param }}",
+      "updated": "A Weight Info is updated with identifier {{ param }}",
+      "deleted": "A Weight Info is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Weight Info {{ id }}?"
+      },
+      "detail": {
+        "title": "Weight Info"
+      },
+      "id": "ID",
+      "currentWeight": "Current Weight",
+      "expectedWeight": "Expected Weight",
+      "heightInInch": "Height In Inch",
+      "numberOfDays": "Number Of Days",
+      "mealPlanSettings": "Meal Plan Settings"
+    }
+  }
+}

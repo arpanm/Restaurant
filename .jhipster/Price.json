@@ -1,0 +1,25 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203180329",
+  "dto": "mapstruct",
+  "entityTableName": "price",
+  "fields": [
+    {
+      "fieldName": "mrp",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "discountPercentage",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Price",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

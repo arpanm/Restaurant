@@ -1,0 +1,73 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203175729",
+  "dto": "mapstruct",
+  "entityTableName": "location",
+  "fields": [
+    {
+      "fieldName": "saveAs",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gst",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "streetAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postalCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "area",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "stateProvince",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "country",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "latitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Location",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "addresses",
+      "relationshipName": "usr",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

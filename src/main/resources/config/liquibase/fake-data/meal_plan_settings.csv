@@ -1,0 +1,11 @@
+id;diet_type;food_type
+1;LowCarb;NonVeg
+2;Keto;Vegan
+3;LowCarb;Veg
+4;LowCarb;NonVeg
+5;LowFat;Vegan
+6;LowFat;Veg
+7;LowFat;Vegan
+8;Blend;Vegan
+9;IntermittentFasting;Veg
+10;Blend;Veg
