@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "Restaurant",
+    "buildTool": "maven",
+    "clientFramework": "react",
+    "clientPackageManager": "npm",
+    "devDatabaseType": "mysql",
+    "devServerPort": 9060,
+    "enableSwaggerCodegen": true,
+    "entities": ["PincodeMaster"],
+    "jhipsterVersion": "8.0.0",
+    "jwtSecretKey": "ZGY2NmE0YzJmYTBiMDEzYTkyN2UzOTk1MzY4YjI5YWQ3N2I5NDRiNWY0OTEyZjYzMzQ0N2U3ZjY4M2NiN2E5YzExOGYwNTU5YWY0MWVkY2QyMzUxN2ExNTYwODg5ODE2OTgwYjcyZDlkNTA4MWEyOGNmZDI2MThlY2MyZmY3YTY=",
+    "languages": ["en", "fr"],
+    "lastLiquibaseTimestamp": 1701625590000,
+    "nativeLanguage": "en",
+    "packageFolder": "com/restaurant/angikar",
+    "packageName": "com.restaurant.angikar",
+    "prodDatabaseType": "mysql",
+    "serverPort": "9001"
+  }
+}
