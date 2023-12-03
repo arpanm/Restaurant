@@ -1,0 +1,25 @@
+{
+  "restaurantApp": {
+    "calorieInfo": {
+      "home": {
+        "title": "CalorieInfos",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Calorie Info",
+        "createOrEditLabel": "Créer ou éditer un Calorie Info",
+        "notFound": "Aucun Calorie Info trouvé"
+      },
+      "created": "Un nouveau Calorie Info a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Calorie Info avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Calorie Info avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Calorie Info {{ id }} ?"
+      },
+      "detail": {
+        "title": "Calorie Info"
+      },
+      "id": "ID",
+      "dailyCalorieLimit": "Daily Calorie Limit",
+      "mealPlanSettings": "Meal Plan Settings"
+    }
+  }
+}

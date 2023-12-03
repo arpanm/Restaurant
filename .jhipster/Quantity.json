@@ -1,0 +1,28 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203181749",
+  "dto": "mapstruct",
+  "entityTableName": "quantity",
+  "fields": [
+    {
+      "fieldName": "quantity",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "minQuantity",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Quantity",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "qtyUnit",
+      "relationshipName": "qtyUnit",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

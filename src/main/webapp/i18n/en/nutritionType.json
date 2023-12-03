@@ -1,0 +1,11 @@
+{
+  "restaurantApp": {
+    "NutritionType": {
+      "null": "",
+      "Calory": "Calory",
+      "Fat": "Fat",
+      "Protein": "Protein",
+      "Carbs": "Carbs"
+    }
+  }
+}

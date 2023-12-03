@@ -1,0 +1,25 @@
+{
+  "restaurantApp": {
+    "ingredienceMaster": {
+      "home": {
+        "title": "IngredienceMasters",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Ingredience Master",
+        "createOrEditLabel": "Créer ou éditer un Ingredience Master",
+        "notFound": "Aucun Ingredience Master trouvé"
+      },
+      "created": "Un nouveau Ingredience Master a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Ingredience Master avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Ingredience Master avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Ingredience Master {{ id }} ?"
+      },
+      "detail": {
+        "title": "Ingredience Master"
+      },
+      "id": "ID",
+      "ingredience": "Ingredience",
+      "items": "Items"
+    }
+  }
+}

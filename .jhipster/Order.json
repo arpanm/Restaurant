@@ -1,0 +1,50 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203183349",
+  "dto": "mapstruct",
+  "entityTableName": "jhi_order",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "OrderStatus",
+      "fieldValues": "Pending,Delivered,Paid,PaymentFailed,InProcess"
+    },
+    {
+      "fieldName": "orderDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "couponValue",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Order",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "location",
+      "relationshipName": "billingLoc",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "orderItem",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "items",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "coupon",
+      "relationshipName": "coupon",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

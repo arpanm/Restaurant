@@ -1,0 +1,25 @@
+{
+  "restaurantApp": {
+    "skipDate": {
+      "home": {
+        "title": "SkipDates",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Skip Date",
+        "createOrEditLabel": "Créer ou éditer un Skip Date",
+        "notFound": "Aucun Skip Date trouvé"
+      },
+      "created": "Un nouveau Skip Date a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Skip Date avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Skip Date avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Skip Date {{ id }} ?"
+      },
+      "detail": {
+        "title": "Skip Date"
+      },
+      "id": "ID",
+      "skipDate": "Skip Date",
+      "mealPlanItem": "Meal Plan Item"
+    }
+  }
+}

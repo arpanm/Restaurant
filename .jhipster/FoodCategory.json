@@ -1,0 +1,33 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203181449",
+  "dto": "mapstruct",
+  "entityTableName": "food_category",
+  "fields": [
+    {
+      "fieldName": "catName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imageUrl",
+      "fieldType": "String"
+    }
+  ],
+  "name": "FoodCategory",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "category",
+      "relationshipName": "item",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

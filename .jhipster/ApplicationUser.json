@@ -1,0 +1,86 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203181049",
+  "dto": "mapstruct",
+  "entityTableName": "application_user",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "role",
+      "fieldType": "UserRole",
+      "fieldValues": "Customer,RestaurantAdmin,SuperAdmin"
+    },
+    {
+      "fieldName": "isPhoneValidated",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isEmailValidated",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "phoneValidatedOn",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "emailValidatedOn",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "ApplicationUser",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "usr",
+      "relationshipName": "addresses",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "otp",
+      "otherEntityRelationshipName": "usr",
+      "relationshipName": "otp",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "mealPlan",
+      "otherEntityRelationshipName": "usr",
+      "relationshipName": "mealPlan",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cart",
+      "otherEntityRelationshipName": "usr",
+      "relationshipName": "cart",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "restaurant",
+      "otherEntityRelationshipName": "admins",
+      "relationshipName": "restaurant",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
