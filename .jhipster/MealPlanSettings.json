@@ -1,0 +1,50 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203182635",
+  "dto": "mapstruct",
+  "entityTableName": "meal_plan_settings",
+  "fields": [
+    {
+      "fieldName": "dietType",
+      "fieldType": "DietType",
+      "fieldValues": "Keto,IntermittentFasting,LowCarb,LowFat,Blend"
+    },
+    {
+      "fieldName": "foodType",
+      "fieldType": "FoodType",
+      "fieldValues": "Veg,NonVeg,Vegan"
+    }
+  ],
+  "name": "MealPlanSettings",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "weightInfo",
+      "relationshipName": "weightInfo",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "calorieInfo",
+      "relationshipName": "calorieInfo",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "mealPlan",
+      "otherEntityRelationshipName": "mealPlanSetting",
+      "relationshipName": "plans",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "avoid",
+      "otherEntityRelationshipName": "mealPlanSettings",
+      "relationshipName": "avoidList",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

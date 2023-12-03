@@ -1,0 +1,9 @@
+{
+  "restaurantApp": {
+    "RefundStatus": {
+      "null": "",
+      "Success": "Success",
+      "InProcess": "InProcess"
+    }
+  }
+}

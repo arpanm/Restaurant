@@ -1,0 +1,8 @@
+{
+  "restaurantApp": {
+    "PaymentVendor": {
+      "null": "",
+      "RazorPay": "RazorPay"
+    }
+  }
+}

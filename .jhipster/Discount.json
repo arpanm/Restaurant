@@ -1,0 +1,22 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203183135",
+  "dto": "mapstruct",
+  "entityTableName": "discount",
+  "fields": [
+    {
+      "fieldName": "discount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "slab",
+      "fieldType": "DiscountSlab",
+      "fieldValues": "OneDay,SevenDay,ThirtyDay,More"
+    }
+  ],
+  "name": "Discount",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

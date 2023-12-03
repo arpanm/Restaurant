@@ -1,0 +1,11 @@
+id;name;password;email;phone;role;is_phone_validated;is_email_validated;phone_validated_on;email_validated_on
+1;brr aromatic;solemnly;Rachael.Hintz87@hotmail.com;405-765-0929;Customer;false;false;2023-12-03T12:26:08;2023-12-03T07:17:32
+2;when if;wiggly;Vivian_Bahringer6@gmail.com;607.771.1771 x55125;RestaurantAdmin;false;false;2023-12-02T23:12:11;2023-12-03T03:04:17
+3;kissingly till ha;truthfully;Pete_Schamberger47@yahoo.com;1-647-364-6889 x253;Customer;true;true;2023-12-03T08:28:15;2023-12-03T09:21:09
+4;hmph poorly;western unsaddle;Vada42@hotmail.com;245-828-4860 x67788;RestaurantAdmin;false;false;2023-12-03T00:39:58;2023-12-02T22:14:16
+5;meh zebrafish pristine;jittery function retell;Mireille80@hotmail.com;(700) 612-1060 x32585;Customer;false;true;2023-12-02T23:51:24;2023-12-02T19:01:40
+6;mama propagate high-level;up and;Serenity_Rowe@gmail.com;904-305-2476 x0647;RestaurantAdmin;false;true;2023-12-03T01:32:19;2023-12-02T23:13:57
+7;controller gloomy;gullible troubled drafty;Kasey9@yahoo.com;(474) 693-3703;SuperAdmin;false;true;2023-12-02T20:03:50;2023-12-03T01:35:49
+8;ionize;brr;Dallas86@gmail.com;358-326-7388;SuperAdmin;false;true;2023-12-03T15:43:37;2023-12-03T05:49:31
+9;malinger;woot fox;Kelley72@gmail.com;486.611.5903 x2622;RestaurantAdmin;false;true;2023-12-03T02:52:19;2023-12-02T22:56:27
+10;blah obediently energize;productive lapdog;Sophia.Corkery@yahoo.com;1-538-337-9336;SuperAdmin;true;false;2023-12-02T20:33:46;2023-12-02T20:59:59

@@ -1,0 +1,59 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203183735",
+  "dto": "mapstruct",
+  "entityTableName": "payment",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "PaymentStatus",
+      "fieldValues": "Failed,Success,InProcess,PartialRefunded,Refunded"
+    },
+    {
+      "fieldName": "vendor",
+      "fieldType": "PaymentVendor",
+      "fieldValues": "RazorPay"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "PaymentType",
+      "fieldValues": "COD,CREDIT_CARD,DEBIT_CARD,WALLET"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "initDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "totalRefundAmount",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Payment",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "refund",
+      "otherEntityRelationshipName": "payment",
+      "relationshipName": "refunds",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "order",
+      "otherEntityRelationshipName": "payments",
+      "relationshipName": "order",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

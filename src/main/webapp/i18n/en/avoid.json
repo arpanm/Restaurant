@@ -1,0 +1,25 @@
+{
+  "restaurantApp": {
+    "avoid": {
+      "home": {
+        "title": "Avoids",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Avoid",
+        "createOrEditLabel": "Create or edit a Avoid",
+        "notFound": "No Avoids found"
+      },
+      "created": "A new Avoid is created with identifier {{ param }}",
+      "updated": "A Avoid is updated with identifier {{ param }}",
+      "deleted": "A Avoid is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Avoid {{ id }}?"
+      },
+      "detail": {
+        "title": "Avoid"
+      },
+      "id": "ID",
+      "avoidIngredience": "Avoid Ingredience",
+      "mealPlanSettings": "Meal Plan Settings"
+    }
+  }
+}

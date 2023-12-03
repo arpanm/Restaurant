@@ -1,0 +1,11 @@
+{
+  "restaurantApp": {
+    "DiscountSlab": {
+      "null": "",
+      "OneDay": "OneDay",
+      "SevenDay": "SevenDay",
+      "ThirtyDay": "ThirtyDay",
+      "More": "More"
+    }
+  }
+}

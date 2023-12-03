@@ -1,0 +1,53 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203182935",
+  "dto": "mapstruct",
+  "entityTableName": "meal_plan_item",
+  "fields": [
+    {
+      "fieldName": "planItemName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hourValue",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "pincode",
+      "fieldType": "String"
+    }
+  ],
+  "name": "MealPlanItem",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "location",
+      "relationshipName": "deliveryLocation",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "skipDate",
+      "otherEntityRelationshipName": "mealPlanItem",
+      "relationshipName": "skipDates",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "mealPlanItems",
+      "relationshipName": "items",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "mealPlan",
+      "otherEntityRelationshipName": "meals",
+      "relationshipName": "plan",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

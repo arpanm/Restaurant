@@ -1,0 +1,25 @@
+{
+  "restaurantApp": {
+    "qtyUnit": {
+      "home": {
+        "title": "QtyUnits",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Qty Unit",
+        "createOrEditLabel": "Créer ou éditer un Qty Unit",
+        "notFound": "Aucun Qty Unit trouvé"
+      },
+      "created": "Un nouveau Qty Unit a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Qty Unit avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Qty Unit avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Qty Unit {{ id }} ?"
+      },
+      "detail": {
+        "title": "Qty Unit"
+      },
+      "id": "ID",
+      "unitName": "Unit Name",
+      "quantity": "Quantity"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "restaurantApp": {
+    "itemPincodeMapping": {
+      "home": {
+        "title": "ItemPincodeMappings",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Item Pincode Mapping",
+        "createOrEditLabel": "Créer ou éditer un Item Pincode Mapping",
+        "notFound": "Aucun Item Pincode Mapping trouvé"
+      },
+      "created": "Un nouveau Item Pincode Mapping a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Item Pincode Mapping avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Item Pincode Mapping avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Item Pincode Mapping {{ id }} ?"
+      },
+      "detail": {
+        "title": "Item Pincode Mapping"
+      },
+      "id": "ID",
+      "serviceability": "Serviceability",
+      "pincode": "Pincode",
+      "item": "Item",
+      "restaurant": "Restaurant"
+    }
+  }
+}

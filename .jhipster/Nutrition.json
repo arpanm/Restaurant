@@ -1,0 +1,22 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203182135",
+  "dto": "mapstruct",
+  "entityTableName": "nutrition",
+  "fields": [
+    {
+      "fieldName": "nutritionValue",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "nutriType",
+      "fieldType": "NutritionType",
+      "fieldValues": "Calory,Fat,Protein,Carbs"
+    }
+  ],
+  "name": "Nutrition",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

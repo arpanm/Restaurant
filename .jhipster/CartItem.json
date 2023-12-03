@@ -1,0 +1,37 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203183235",
+  "dto": "mapstruct",
+  "entityTableName": "cart_item",
+  "fields": [
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "CartItem",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "item",
+      "relationshipName": "item",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "mealPlan",
+      "relationshipName": "meal",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "cart",
+      "otherEntityRelationshipName": "items",
+      "relationshipName": "cart",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

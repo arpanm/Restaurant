@@ -1,0 +1,25 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203183035",
+  "dto": "mapstruct",
+  "entityTableName": "skip_date",
+  "fields": [
+    {
+      "fieldName": "skipDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "SkipDate",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "mealPlanItem",
+      "otherEntityRelationshipName": "skipDates",
+      "relationshipName": "mealPlanItem",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

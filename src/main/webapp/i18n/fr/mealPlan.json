@@ -1,0 +1,32 @@
+{
+  "restaurantApp": {
+    "mealPlan": {
+      "home": {
+        "title": "MealPlans",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Meal Plan",
+        "createOrEditLabel": "Créer ou éditer un Meal Plan",
+        "notFound": "Aucun Meal Plan trouvé"
+      },
+      "created": "Un nouveau Meal Plan a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Meal Plan avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Meal Plan avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Meal Plan {{ id }} ?"
+      },
+      "detail": {
+        "title": "Meal Plan"
+      },
+      "id": "ID",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "planName": "Plan Name",
+      "discount": "Discount",
+      "meals": "Meals",
+      "mealPlanSetting": "Meal Plan Setting",
+      "usr": "Usr",
+      "cartItem": "Cart Item",
+      "orderItem": "Order Item"
+    }
+  }
+}

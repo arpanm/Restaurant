@@ -1,0 +1,17 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203182535",
+  "dto": "mapstruct",
+  "entityTableName": "calorie_info",
+  "fields": [
+    {
+      "fieldName": "dailyCalorieLimit",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "CalorieInfo",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,25 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203183535",
+  "dto": "mapstruct",
+  "entityTableName": "coupon",
+  "fields": [
+    {
+      "fieldName": "maxValue",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "maxPercentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "minOrderValue",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Coupon",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,36 @@
+{
+  "restaurantApp": {
+    "item": {
+      "home": {
+        "title": "Items",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Item",
+        "createOrEditLabel": "Créer ou éditer un Item",
+        "notFound": "Aucun Item trouvé"
+      },
+      "created": "Un nouveau Item a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Item avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Item avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Item {{ id }} ?"
+      },
+      "detail": {
+        "title": "Item"
+      },
+      "id": "ID",
+      "itemName": "Item Name",
+      "imageUrl": "Image Url",
+      "properties": "Properties",
+      "foodType": "Food Type",
+      "nutrition": "Nutrition",
+      "price": "Price",
+      "quantity": "Quantity",
+      "itemPincodeMapping": "Item Pincode Mapping",
+      "ingredience": "Ingredience",
+      "category": "Category",
+      "mealPlanItems": "Meal Plan Items",
+      "cartItem": "Cart Item",
+      "orderItem": "Order Item"
+    }
+  }
+}
