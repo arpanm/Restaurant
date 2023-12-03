@@ -1,0 +1,44 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203180155",
+  "dto": "mapstruct",
+  "entityTableName": "otp",
+  "fields": [
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "otp",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isValidated",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "expiry",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Otp",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "applicationUser",
+      "relationshipName": "usr",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity MealPlanSettings.
+    -->
+    <changeSet id="20231203181355-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="weight_info_id"
+                                 baseTableName="meal_plan_settings"
+                                 constraintName="fk_meal_plan_settings__weight_info_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="weight_info"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="calorie_info_id"
+                                 baseTableName="meal_plan_settings"
+                                 constraintName="fk_meal_plan_settings__calorie_info_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="calorie_info"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="meal_plan_settings_id"
+                                 baseTableName="rel_meal_plan_settings__avoid_list"
+                                 constraintName="fk_rel_meal_plan_settings__avoid_list__meal_plan_settings_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="meal_plan_settings"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="avoid_list_id"
+                                 baseTableName="rel_meal_plan_settings__avoid_list"
+                                 constraintName="fk_rel_meal_plan_settings__avoid_list__avoid_list_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="avoid"
+                                 />
+    </changeSet>
+</databaseChangeLog>

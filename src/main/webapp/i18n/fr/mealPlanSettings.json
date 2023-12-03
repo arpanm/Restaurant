@@ -1,0 +1,29 @@
+{
+  "restaurantApp": {
+    "mealPlanSettings": {
+      "home": {
+        "title": "MealPlanSettings",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Meal Plan Settings",
+        "createOrEditLabel": "Créer ou éditer un Meal Plan Settings",
+        "notFound": "Aucun Meal Plan Settings trouvé"
+      },
+      "created": "Un nouveau Meal Plan Settings a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Meal Plan Settings avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Meal Plan Settings avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Meal Plan Settings {{ id }} ?"
+      },
+      "detail": {
+        "title": "Meal Plan Settings"
+      },
+      "id": "ID",
+      "dietType": "Diet Type",
+      "foodType": "Food Type",
+      "weightInfo": "Weight Info",
+      "calorieInfo": "Calorie Info",
+      "plans": "Plans",
+      "avoidList": "Avoid List"
+    }
+  }
+}

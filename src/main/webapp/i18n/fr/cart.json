@@ -1,0 +1,26 @@
+{
+  "restaurantApp": {
+    "cart": {
+      "home": {
+        "title": "Carts",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Cart",
+        "createOrEditLabel": "Créer ou éditer un Cart",
+        "notFound": "Aucun Cart trouvé"
+      },
+      "created": "Un nouveau Cart a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Cart avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Cart avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Cart {{ id }} ?"
+      },
+      "detail": {
+        "title": "Cart"
+      },
+      "id": "ID",
+      "status": "Status",
+      "items": "Items",
+      "usr": "Usr"
+    }
+  }
+}

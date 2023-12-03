@@ -1,0 +1,10 @@
+{
+  "restaurantApp": {
+    "FoodType": {
+      "null": "",
+      "Veg": "Veg",
+      "NonVeg": "NonVeg",
+      "Vegan": "Vegan"
+    }
+  }
+}

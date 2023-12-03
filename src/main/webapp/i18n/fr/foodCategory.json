@@ -1,0 +1,27 @@
+{
+  "restaurantApp": {
+    "foodCategory": {
+      "home": {
+        "title": "FoodCategories",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Food Category",
+        "createOrEditLabel": "Créer ou éditer un Food Category",
+        "notFound": "Aucun Food Category trouvé"
+      },
+      "created": "Un nouveau Food Category a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Food Category avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Food Category avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Food Category {{ id }} ?"
+      },
+      "detail": {
+        "title": "Food Category"
+      },
+      "id": "ID",
+      "catName": "Cat Name",
+      "description": "Description",
+      "imageUrl": "Image Url",
+      "item": "Item"
+    }
+  }
+}

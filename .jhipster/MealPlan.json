@@ -1,0 +1,53 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203181555",
+  "dto": "mapstruct",
+  "entityTableName": "meal_plan",
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "planName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "MealPlan",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "discount",
+      "relationshipName": "discount",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "mealPlanItem",
+      "otherEntityRelationshipName": "plan",
+      "relationshipName": "meals",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "mealPlanSettings",
+      "otherEntityRelationshipName": "plans",
+      "relationshipName": "mealPlanSetting",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "mealPlan",
+      "relationshipName": "usr",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
