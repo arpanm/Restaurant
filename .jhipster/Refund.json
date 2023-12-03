@@ -1,0 +1,43 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203183835",
+  "dto": "mapstruct",
+  "entityTableName": "refund",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "RefundStatus",
+      "fieldValues": "Success,InProcess"
+    },
+    {
+      "fieldName": "vendor",
+      "fieldType": "PaymentVendor",
+      "fieldValues": "RazorPay"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "initDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Refund",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "payment",
+      "otherEntityRelationshipName": "refunds",
+      "relationshipName": "payment",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,76 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203182335",
+  "dto": "mapstruct",
+  "entityTableName": "item",
+  "fields": [
+    {
+      "fieldName": "itemName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imageUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "properties",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "foodType",
+      "fieldType": "FoodType",
+      "fieldValues": "Veg,NonVeg,Vegan"
+    }
+  ],
+  "name": "Item",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "nutrition",
+      "relationshipName": "nutrition",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "price",
+      "relationshipName": "price",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "quantity",
+      "relationshipName": "quantity",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "itemPincodeMapping",
+      "otherEntityRelationshipName": "item",
+      "relationshipName": "itemPincodeMapping",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ingredienceMaster",
+      "otherEntityRelationshipName": "items",
+      "relationshipName": "ingredience",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "foodCategory",
+      "relationshipName": "category",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "mealPlanItem",
+      "otherEntityRelationshipName": "items",
+      "relationshipName": "mealPlanItems",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

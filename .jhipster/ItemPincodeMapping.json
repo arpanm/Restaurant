@@ -1,0 +1,34 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203183935",
+  "dto": "mapstruct",
+  "entityTableName": "item_pincode_mapping",
+  "fields": [
+    {
+      "fieldName": "serviceability",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pincode",
+      "fieldType": "String"
+    }
+  ],
+  "name": "ItemPincodeMapping",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "item",
+      "relationshipName": "item",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "restaurant",
+      "relationshipName": "restaurant",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

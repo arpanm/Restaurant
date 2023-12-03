@@ -1,0 +1,27 @@
+{
+  "restaurantApp": {
+    "quantity": {
+      "home": {
+        "title": "Quantities",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Quantity",
+        "createOrEditLabel": "Créer ou éditer un Quantity",
+        "notFound": "Aucun Quantity trouvé"
+      },
+      "created": "Un nouveau Quantity a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Quantity avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Quantity avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Quantity {{ id }} ?"
+      },
+      "detail": {
+        "title": "Quantity"
+      },
+      "id": "ID",
+      "quantity": "Quantity",
+      "minQuantity": "Min Quantity",
+      "qtyUnit": "Qty Unit",
+      "item": "Item"
+    }
+  }
+}

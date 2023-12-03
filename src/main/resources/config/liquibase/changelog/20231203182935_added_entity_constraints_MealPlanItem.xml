@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity MealPlanItem.
+    -->
+    <changeSet id="20231203182935-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="delivery_location_id"
+                                 baseTableName="meal_plan_item"
+                                 constraintName="fk_meal_plan_item__delivery_location_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="location"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="meal_plan_item_id"
+                                 baseTableName="rel_meal_plan_item__items"
+                                 constraintName="fk_rel_meal_plan_item__items__meal_plan_item_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="meal_plan_item"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="items_id"
+                                 baseTableName="rel_meal_plan_item__items"
+                                 constraintName="fk_rel_meal_plan_item__items__items_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="item"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="plan_id"
+                                 baseTableName="meal_plan_item"
+                                 constraintName="fk_meal_plan_item__plan_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="meal_plan"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,30 @@
+{
+  "restaurantApp": {
+    "otp": {
+      "home": {
+        "title": "Otps",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Otp",
+        "createOrEditLabel": "Créer ou éditer un Otp",
+        "notFound": "Aucun Otp trouvé"
+      },
+      "created": "Un nouveau Otp a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Otp avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Otp avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Otp {{ id }} ?"
+      },
+      "detail": {
+        "title": "Otp"
+      },
+      "id": "ID",
+      "email": "Email",
+      "phone": "Phone",
+      "otp": "Otp",
+      "isActive": "Is Active",
+      "isValidated": "Is Validated",
+      "expiry": "Expiry",
+      "usr": "Usr"
+    }
+  }
+}

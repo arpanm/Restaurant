@@ -1,0 +1,12 @@
+{
+  "restaurantApp": {
+    "PaymentStatus": {
+      "null": "",
+      "Failed": "Failed",
+      "Success": "Success",
+      "InProcess": "InProcess",
+      "PartialRefunded": "PartialRefunded",
+      "Refunded": "Refunded"
+    }
+  }
+}

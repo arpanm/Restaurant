@@ -1,0 +1,29 @@
+{
+  "restaurantApp": {
+    "refund": {
+      "home": {
+        "title": "Refunds",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Refund",
+        "createOrEditLabel": "Créer ou éditer un Refund",
+        "notFound": "Aucun Refund trouvé"
+      },
+      "created": "Un nouveau Refund a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Refund avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Refund avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Refund {{ id }} ?"
+      },
+      "detail": {
+        "title": "Refund"
+      },
+      "id": "ID",
+      "status": "Status",
+      "vendor": "Vendor",
+      "amount": "Amount",
+      "initDate": "Init Date",
+      "updatedDate": "Updated Date",
+      "payment": "Payment"
+    }
+  }
+}

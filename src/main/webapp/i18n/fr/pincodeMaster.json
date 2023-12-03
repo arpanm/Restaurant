@@ -1,0 +1,28 @@
+{
+  "restaurantApp": {
+    "pincodeMaster": {
+      "home": {
+        "title": "PincodeMasters",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Pincode Master",
+        "createOrEditLabel": "Créer ou éditer un Pincode Master",
+        "notFound": "Aucun Pincode Master trouvé"
+      },
+      "created": "Un nouveau Pincode Master a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Pincode Master avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Pincode Master avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Pincode Master {{ id }} ?"
+      },
+      "detail": {
+        "title": "Pincode Master"
+      },
+      "id": "ID",
+      "pincode": "Pincode",
+      "area": "Area",
+      "city": "City",
+      "stateProvince": "State Province",
+      "country": "Country"
+    }
+  }
+}
