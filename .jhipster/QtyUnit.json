@@ -1,0 +1,17 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203180150",
+  "dto": "mapstruct",
+  "entityTableName": "qty_unit",
+  "fields": [
+    {
+      "fieldName": "unitName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "QtyUnit",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

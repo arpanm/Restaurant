@@ -1,0 +1,44 @@
+{
+  "applications": ["Restaurant"],
+  "changelogDate": "20231203175750",
+  "dto": "mapstruct",
+  "entityTableName": "restaurant",
+  "fields": [
+    {
+      "fieldName": "restaurantName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "logo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "RestaurantType",
+      "fieldValues": "MultiCusion,CloudKitchen"
+    }
+  ],
+  "name": "Restaurant",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "location",
+      "relationshipName": "location",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "restaurant",
+      "relationshipName": "admins",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

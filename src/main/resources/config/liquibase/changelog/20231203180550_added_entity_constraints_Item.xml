@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Item.
+    -->
+    <changeSet id="20231203180550-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="nutrition_id"
+                                 baseTableName="item"
+                                 constraintName="fk_item__nutrition_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nutrition"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="price_id"
+                                 baseTableName="item"
+                                 constraintName="fk_item__price_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="price"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="quantity_id"
+                                 baseTableName="item"
+                                 constraintName="fk_item__quantity_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="quantity"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="item_id"
+                                 baseTableName="rel_item__ingredience"
+                                 constraintName="fk_rel_item__ingredience__item_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="item"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="ingredience_id"
+                                 baseTableName="rel_item__ingredience"
+                                 constraintName="fk_rel_item__ingredience__ingredience_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ingredience_master"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="item"
+                                 constraintName="fk_item__category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="food_category"
+                                 />
+    </changeSet>
+</databaseChangeLog>

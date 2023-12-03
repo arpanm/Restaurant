@@ -1,0 +1,9 @@
+{
+  "restaurantApp": {
+    "RestaurantType": {
+      "null": "",
+      "MultiCusion": "MultiCusion",
+      "CloudKitchen": "CloudKitchen"
+    }
+  }
+}

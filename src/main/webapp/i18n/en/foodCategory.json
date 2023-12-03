@@ -1,0 +1,27 @@
+{
+  "restaurantApp": {
+    "foodCategory": {
+      "home": {
+        "title": "Food Categories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Food Category",
+        "createOrEditLabel": "Create or edit a Food Category",
+        "notFound": "No Food Categories found"
+      },
+      "created": "A new Food Category is created with identifier {{ param }}",
+      "updated": "A Food Category is updated with identifier {{ param }}",
+      "deleted": "A Food Category is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Food Category {{ id }}?"
+      },
+      "detail": {
+        "title": "Food Category"
+      },
+      "id": "ID",
+      "catName": "Cat Name",
+      "description": "Description",
+      "imageUrl": "Image Url",
+      "item": "Item"
+    }
+  }
+}
