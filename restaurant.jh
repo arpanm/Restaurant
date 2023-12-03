@@ -51,7 +51,7 @@ relationship OneToMany {
 	Restaurant{admins} to User{restaurant}
 }
 
-entity Banner{
+entity Banner {
     title String
     imageUrl String
     link String
@@ -120,6 +120,10 @@ entity User {
     email String
     phone String
     role UserRole
+    isPhoneValidated Boolean
+    isEmailValidated Boolean
+    phoneValidatedOn Instant
+    emailValidatedOn Instant
 }
 
 enum UserRole {
@@ -128,8 +132,21 @@ enum UserRole {
     SuperAdmin
 }
 
+entity Otp {
+	email String
+    phone String
+    otp Integer
+    isActive Boolean
+    isValidated Boolean
+    expiry Instant
+}
+
 relationship OneToMany {
 	User{addresses} to Location{user}
+}
+
+relationship OneToMany {
+	User to Otp{user}
 }
 
 entity WeightInfo {
@@ -363,16 +380,6 @@ relationship OneToMany {
 relationship OneToMany {
 	Restaurant to ItemPincodeMapping{restaurant}
 }
-
-
-// Use Data Transfer Objects (DTO)
-dto * with mapstruct
-
-// Set service options to all except few
-service all with serviceImpl except Employee, Job
-
-// Set an angular suffix
-// angularSuffix * with mySuffix
 
 application {
   config {
