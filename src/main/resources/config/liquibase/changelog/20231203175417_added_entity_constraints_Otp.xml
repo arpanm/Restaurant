@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Otp.
+    -->
+    <changeSet id="20231203175417-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="usr_id"
+                                 baseTableName="otp"
+                                 constraintName="fk_otp__usr_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="application_user"
+                                 />
+    </changeSet>
+</databaseChangeLog>
