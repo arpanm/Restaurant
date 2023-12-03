@@ -48,7 +48,7 @@ relationship OneToOne {
 }
 
 relationship OneToMany {
-	Restaurant{admins} to User{restaurant}
+	Restaurant{admins} to ApplicationUser{restaurant}
 }
 
 entity Banner {
@@ -73,34 +73,37 @@ entity Price {
     discountPercentage Double
 }
 
-entity Unit {
+entity QtyUnit {
 	name String
 }
 
-entity Quantity{
-	size Double
+entity Quantity {
+	quantity Double
     minQuantity Double
 }
 
 relationship OneToOne {
-	Quantity{unit} to Unit
+	Quantity{qtyUnit} to Unit
 }
 
 entity Nutrition {
-	value Double
-    type NutritionType
+	nutritionValue Double
+    nutriType NutritionType
 }
 
-entity ContainMaster {
-	value String
+entity IngredienceMaster {
+	ingredience String
 }
 
 entity Item {
-	name String
+	itemName String
     imageUrl String
     properties Long
     foodType FoodType
-    contains String
+}
+
+relationship ManyToMany {
+	Item{ingredience} to IngredienceMaster{items}
 }
 
 
@@ -114,7 +117,7 @@ relationship OneToOne {
     Item{quantity} to Quantity
 }
 
-entity User {
+entity ApplicationUser {
 	name String
     password String
     email String
@@ -142,11 +145,11 @@ entity Otp {
 }
 
 relationship OneToMany {
-	User{addresses} to Location{user}
+	ApplicationUser{addresses} to Location{usr}
 }
 
 relationship OneToMany {
-	User to Otp{user}
+	ApplicationUser to Otp{usr}
 }
 
 entity WeightInfo {
@@ -166,7 +169,7 @@ entity MealPlanSettings {
 }
 
 entity Avoid {
-	name String
+	avoidIngredience String
 }
 
 relationship OneToMany {
@@ -181,19 +184,19 @@ relationship OneToOne {
 entity MealPlan {
     startDate Instant
     endDate Instant
-    name String
+    planName String
 }
 
 relationship OneToMany {
 	MealPlanSettings{plans} to MealPlan{mealPlanSetting}
 }
 relationship OneToMany {
-	User{mealPlan} to MealPlan{user}
+	ApplicationUser{mealPlan} to MealPlan{usr}
 }
 
 entity MealPlanItem {
-	name String // Name will be break fast, lunch dinner etc
-    hour Integer
+	planName String // Name will be break fast, lunch dinner etc
+    hourValue Integer
     pincode String
 }
 
@@ -210,7 +213,7 @@ relationship OneToOne {
 }
 
 entity SkipDate {
-	date LocalDate
+	skipDate LocalDate
 }
 
 relationship OneToMany {
@@ -246,7 +249,7 @@ relationship OneToMany {
 }
 
 relationship OneToMany {
-	User{cart} to Cart{user}
+	ApplicationUser{cart} to Cart{usr}
 }
 
 relationship OneToOne {
@@ -259,6 +262,11 @@ relationship OneToOne {
 
 entity OrderItem {
 	quantity Integer
+    status OrderItemStatus
+}
+
+enum OrderItemStatus {
+	Pending, Delivered, Paid, PaymentFailed, InProcess
 }
 
 entity CouponMaster {
@@ -282,8 +290,8 @@ relationship OneToOne {
 }
 
 entity Order{
-	state OrderStatus
-    date Instant
+	status OrderStatus
+    orderDate Instant
     amount Double
     couponValue Double
 }
@@ -296,6 +304,8 @@ relationship OneToOne {
 	Order{coupon} to Coupon
 }
 
+
+
 enum PaymentVendor {
 	RazorPay
 }
@@ -306,7 +316,7 @@ enum PaymentType {
     WALLET
 }
 entity Payment {
-	state PaymentStatus
+	status PaymentStatus
     vendor PaymentVendor
     type PaymentType
     amount Double
@@ -316,7 +326,7 @@ entity Payment {
 }
 
 entity Refund {
-	state RefundStatus
+	status RefundStatus
     vendor PaymentVendor
     amount Double
     initDate Instant
@@ -349,7 +359,7 @@ relationship OneToOne {
 }
 
 relationship ManyToOne {
-	Order{user} to User
+	Order{usr} to ApplicationUser
 }
 
 relationship OneToOne {
@@ -364,6 +374,9 @@ relationship OneToOne {
 	OrderItem{meal} to MealPlan
 }
 
+relationship ManyToOne {
+	OrderItem{statusUpdatedBy} to ApplicationUser
+}
 
 entity ItemPincodeMapping {
 	serviceability String
